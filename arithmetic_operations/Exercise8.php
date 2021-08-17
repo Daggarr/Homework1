@@ -19,7 +19,7 @@ function salaryCalc (float $basePay, int $hours): string
 
 
 
-    return round($salary,2)."$\n";
+    return $salary."$\n";
 }
 
 echo salaryCalc(7.50,35);
