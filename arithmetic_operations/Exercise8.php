@@ -1,6 +1,7 @@
 <?php
 
-function salaryCalc (float $basePay, int $hours){
+function salaryCalc (float $basePay, int $hours): string
+{
     if ($basePay<8.00){
         return "Base pay is too low!\n";
     }
@@ -18,7 +19,7 @@ function salaryCalc (float $basePay, int $hours){
 
 
 
-    return round($salary,2)."\n";
+    return round($salary,2)."$\n";
 }
 
 echo salaryCalc(7.50,35);
