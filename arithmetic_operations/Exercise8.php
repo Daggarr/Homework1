@@ -11,11 +11,14 @@ function salaryCalc (float $basePay, int $hours){
 
     if ($hours>40){
         $overtime=($hours-40) * $basePay * 1.5;
+        $salary=40*$basePay+$overtime;
+    }else{
+        $salary=$hours*$basePay;
     }
 
-    $salary=40*$basePay+$overtime;
 
-    return $salary;
+
+    return round($salary,2)."\n";
 }
 
 echo salaryCalc(7.50,35);
