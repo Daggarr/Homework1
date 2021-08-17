@@ -7,22 +7,38 @@ echo "4. Quit\n";
 $choice = readline("Enter your choice (1-4) : ");
 
 class Geometry{
-    public static function circleArea(){
+    public static function circleArea(): float{
         $radius = (float) readline('Enter radius: ');
+
+        if ($radius<0){
+            echo "Radius cant be negative!";
+            exit;
+        }
 
         return $radius * 2 * M_PI;
     }
 
-    public static function rectangleArea(){
+    public static function rectangleArea(): float{
         $length = (float) readline('Enter length: ');
         $width = (float) readline('Enter width: ');
+
+        if ($length<0 OR $width<0){
+            echo "Length and width cant be negative!";
+            exit;
+        }
 
         return $length * $width;
     }
 
-    public static function triangleArea(){
+    public static function triangleArea(): float
+    {
         $base = (float) readline('Enter base length: ');
         $height = (float) readline('Enter height: ');
+
+        if ($base<0 OR $height<0){
+            echo "Base and height cant be negative!";
+            exit;
+        }
 
         return $base * $height * 0.5;
     }
