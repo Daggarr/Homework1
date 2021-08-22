@@ -32,6 +32,11 @@ while ($wordIsNotGuessed){
 
     $guess = readline("Guess: ");
 
+    if (strlen($guess)>1){
+        echo "Guess must be one letter!\n";
+        continue;
+    }
+
     if (in_array($guess,$wordToGuessArray)==false){
         $misses=$misses.$guess;
     }
@@ -55,7 +60,9 @@ while ($wordIsNotGuessed){
 
         $answer = readline("Play 'again' or 'quit?' ");
         if ($answer=='again'){
+            $wordToGuess = $wordlist[rand(1,count($wordlist)-1)];
             $wordToGuessArray=str_split($wordToGuess);
+            $guessedWord = $wordToGuessArray;
 
             foreach ($guessedWord as &$letter){
                 $letter = '_';
@@ -70,7 +77,9 @@ while ($wordIsNotGuessed){
 
         $answer = readline("Play 'again' or 'quit?'");
         if ($answer=='again'){
+            $wordToGuess = $wordlist[rand(1,count($wordlist)-1)];
             $wordToGuessArray=str_split($wordToGuess);
+            $guessedWord = $wordToGuessArray;
 
             foreach ($guessedWord as &$letter){
                 $letter = '_';
