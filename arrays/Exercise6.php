@@ -37,6 +37,11 @@ while ($wordIsNotGuessed){
         continue;
     }
 
+    if (strpos($misses,$guess) !== false){
+        echo "You already guessed this letter!\n";
+        continue;
+    }
+
     if (in_array($guess,$wordToGuessArray)==false){
         $misses=$misses.$guess;
     }
