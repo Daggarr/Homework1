@@ -58,7 +58,7 @@ while ($wordIsNotGuessed){
 
         echo "YOU GOT IT!\n";
 
-        $answer = readline("Play 'again' or 'quit?' ");
+        $answer = readline("Play 'again' or 'quit'? ");
         if ($answer=='again'){
             $wordToGuess = $wordlist[rand(1,count($wordlist)-1)];
             $wordToGuessArray=str_split($wordToGuess);
@@ -75,7 +75,7 @@ while ($wordIsNotGuessed){
     if (strlen($misses)==4){
         echo "You didn't guess the word and ran out of tries.\n";
 
-        $answer = readline("Play 'again' or 'quit?'");
+        $answer = readline("Play 'again' or 'quit'?");
         if ($answer=='again'){
             $wordToGuess = $wordlist[rand(1,count($wordlist)-1)];
             $wordToGuessArray=str_split($wordToGuess);

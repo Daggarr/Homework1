@@ -7,7 +7,7 @@ for ($i=0;$i<10;$i++){
 
 $numbersCopy = $numbers;
 
-$numbers[9]=-7;
+$numbers[count($numbers)-1]=-7;
 
 echo "Array 1: ";
 foreach ($numbers as $number){
