@@ -49,6 +49,14 @@ while ($gameIsGoing){
             echo "The winner is 'O'!\n";
             exit;
         }
+
+        if ($board[0][$i]=='X' AND $board[1][$i]=='X' AND $board[2][$i]=='X'){
+            echo "The winner is 'X'!\n";
+            exit;
+        }elseif ($board[0][$i]=='O' AND $board[1][$i]=='O' AND $board[2][$i]=='O'){
+            echo "The winner is 'O'!\n";
+            exit;
+        }
     }
 
     if ($board[0][0]=='X' AND $board[1][1]=='X' AND $board[2][2]=='X'){
